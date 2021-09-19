@@ -3,9 +3,9 @@
 
 int main() {
     LinkedList list;
-    Employee *e1 = createEmployee("Sujay Bhowmick", 43);
-    Employee *e2 = createEmployee("Annette Stephens Bhowmick", 41);
-    Employee *e3 = createEmployee("Kiaan Bhowmick", 8);
+    Employee *e1 = createEmployee("Iron Man", 43);
+    Employee *e2 = createEmployee("Captain America", 41);
+    Employee *e3 = createEmployee("Hulk", 35);
     initializeList(&list);
     addHead(&list, e1);
     addHead(&list, e2);
@@ -13,8 +13,9 @@ int main() {
     printLinkedList(&list, (DISPLAY)displayEmployee);
     Node *node = getNode(&list, (COMPARE)compareEmployee, e2);
     Employee *emp = (Employee *)node->data;
-    printf("%s\t%d\n", emp->name, emp->age);
+    printf("Delete node \"%s\"\n\n", emp->name);
     delete(&list, node);
+    printf("List after deletion...\n\n");
     printLinkedList(&list, (DISPLAY) displayEmployee);
     freeEmployee(e1);
     freeEmployee(e2);
