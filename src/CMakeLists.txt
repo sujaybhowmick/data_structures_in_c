@@ -1,5 +1,5 @@
 set(LIB_SOURCES
-    list/linked_list.c)
+    list/linked_list.c common/utils.c)
 
 set(HEADERS
         list/linked_list.h employee/employee.h)

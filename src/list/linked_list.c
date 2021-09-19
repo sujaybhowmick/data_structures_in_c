@@ -87,10 +87,3 @@ void printLinkedList(LinkedList *list, DISPLAY display)
     }
     printDashes(60);
 }
-
-void printDashes(unsigned char number_of_dashes) {
-    for(int i = 0; i < number_of_dashes; i++){
-        printf("%s", "-");
-    }
-    printf("%s\n", "");
-}

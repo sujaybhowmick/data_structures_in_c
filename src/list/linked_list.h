@@ -6,7 +6,7 @@
 #define DATA_STRUCTURES_IN_C_LINKED_LIST_H
 #include <stdio.h>
 #include <stdlib.h>
-#include "common.h"
+#include "../common/utils.h"
 
 typedef struct node {
     void *data;

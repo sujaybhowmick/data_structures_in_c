@@ -144,6 +144,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/kali/CLionProjects/data_structures_in_c/src/common/utils.c">
+			<Option target="dsInC"/>
+		</Unit>
+		<Unit filename="/home/kali/CLionProjects/data_structures_in_c/src/common/utils.h">
+			<Option target="dsInC"/>
+		</Unit>
 		<Unit filename="/home/kali/CLionProjects/data_structures_in_c/src/employee/employee.c">
 			<Option target="main"/>
 		</Unit>
