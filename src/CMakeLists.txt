@@ -1,8 +1,8 @@
 set(LIB_SOURCES
-    list/linked_list.c common/utils.c)
+    list/linked_list.c common/utils.c queue/queue.c)
 
 set(HEADERS
-        list/linked_list.h employee/employee.h)
+        list/linked_list.h employee/employee.h queue/queue.h)
 
 set(MAIN_SOURCES
         employee/employee.c main.c)

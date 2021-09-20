@@ -167,6 +167,13 @@
 		<Unit filename="/home/kali/CLionProjects/data_structures_in_c/src/main.c">
 			<Option target="main"/>
 		</Unit>
+		<Unit filename="/home/kali/CLionProjects/data_structures_in_c/src/queue/queue.c">
+			<Option target="dsInC"/>
+		</Unit>
+		<Unit filename="/home/kali/CLionProjects/data_structures_in_c/src/queue/queue.h">
+			<Option target="dsInC"/>
+			<Option target="main"/>
+		</Unit>
 		<Unit filename="/home/kali/CLionProjects/data_structures_in_c/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

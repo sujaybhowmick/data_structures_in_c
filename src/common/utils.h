@@ -1,5 +1,5 @@
 //
-// Created by kali on 9/17/21.
+// Created by Sujay Bhowmick on 9/17/21.
 //
 
 #ifndef DATA_STRUCTURES_IN_C_UTILS_H
