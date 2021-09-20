@@ -4,9 +4,9 @@
 
 #ifndef DATA_STRUCTURES_IN_C_LINKED_LIST_H
 #define DATA_STRUCTURES_IN_C_LINKED_LIST_H
-#include <stdio.h>
-#include <stdlib.h>
-#include "../common/utils.h"
+
+// function pointer to compare two values
+typedef int(*COMPARE)(void *, void *);
 
 typedef struct node {
     void *data;
@@ -19,10 +19,14 @@ typedef struct linkedList {
     Node *current;
 } LinkedList;
 
-void initializeList(LinkedList*);
-void addHead(LinkedList*, void*);
-void addTail(LinkedList*, void*);
-void delete(LinkedList*, Node*);
-Node *getNode(LinkedList*, COMPARE, void*);
-void printLinkedList(LinkedList*, DISPLAY);
+void initializeList(LinkedList *);
+
+void addHead(LinkedList *, void *);
+
+void addTail(LinkedList *, void *);
+
+void delete(LinkedList *, Node *);
+
+Node *getNode(LinkedList *, COMPARE, void *);
+
 #endif //DATA_STRUCTURES_IN_C_LINKED_LIST_H

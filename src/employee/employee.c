@@ -7,16 +7,14 @@
 #include <string.h>
 #include "employee.h"
 
-Employee* createEmployee(char name[], unsigned char age)
-{
-    Employee *e1 = (Employee*) malloc(sizeof(Employee));
+Employee *createEmployee(char name[], unsigned char age) {
+    Employee *e1 = (Employee *) malloc(sizeof(Employee));
     strcpy(e1->name, name);
     e1->age = age;
     return e1;
 }
 
-void freeEmployee(Employee *e)
-{
+void freeEmployee(Employee *e) {
     free(e);
 }
 
@@ -26,7 +24,7 @@ int compareEmployee(Employee *e1, Employee *e2) {
 
 void displayEmployee(Employee *employee) {
     printf("%s", employee->name);
-    for(int i = 0; i < (55 - strlen(employee->name)); i++){
+    for (int i = 0; i < (55 - strlen(employee->name)); i++) {
         printf("%s", " ");
     }
     printf("%d\n", employee->age);

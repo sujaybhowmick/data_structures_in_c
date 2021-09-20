@@ -1,10 +1,11 @@
 //
 // Created by Sujay Bhowmick on 9/17/21.
 //
-
+#include <stdio.h>
 #include "list/linked_list.h"
 #include "queue/queue.h"
 #include "employee/employee.h"
+#include "common/utils.h"
 
 int main() {
     printf("Linked list example...\n");
@@ -16,9 +17,9 @@ int main() {
     addHead(&list, e1);
     addHead(&list, e2);
     addHead(&list, e3);
-    printLinkedList(&list, (DISPLAY)displayEmployee);
-    Node *node = getNode(&list, (COMPARE)compareEmployee, e2);
-    Employee *emp = (Employee *)node->data;
+    printLinkedList(&list, (DISPLAY) displayEmployee);
+    Node *node = getNode(&list, (COMPARE) compareEmployee, e2);
+    Employee *emp = (Employee *) node->data;
     printf("Delete node \"%s\"\n\n", emp->name);
     delete(&list, node);
     printf("List after deletion...\n\n");
@@ -32,13 +33,13 @@ int main() {
     enqueue(&queue, e1);
     printLinkedList(&queue, (DISPLAY) displayEmployee);
     void *data = dequeue(&queue);
-    printf("Dequeued %s\n", ((Employee *)data)->name);
+    printf("Dequeued %s\n", ((Employee *) data)->name);
     data = dequeue(&queue);
-    printf("Dequeued %s\n", ((Employee *)data)->name);
+    printf("Dequeued %s\n", ((Employee *) data)->name);
     data = dequeue(&queue);
-    printf("Dequeued %s\n", ((Employee *)data)->name);
+    printf("Dequeued %s\n", ((Employee *) data)->name);
     data = dequeue(&queue);
-    printf("Dequeued %s\n", ((Employee *)data)->name);
+    printf("Dequeued %s\n", ((Employee *) data)->name);
 
     freeEmployee(e1);
     freeEmployee(e2);
