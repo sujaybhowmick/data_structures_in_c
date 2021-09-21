@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include "list/linked_list.h"
 #include "queue/queue.h"
+#include "stack/stack.h"
 #include "employee/employee.h"
 #include "common/utils.h"
 
@@ -40,6 +41,22 @@ int main() {
     printf("Dequeued %s\n", ((Employee *) data)->name);
     data = dequeue(&queue);
     printf("Dequeued %s\n", ((Employee *) data)->name);
+
+    printf("Stack using linked list example...\n");
+    Stack stack;
+    initializeStack(&stack);
+    push(&stack, e1);
+    push(&stack, e2);
+    push(&stack, e3);
+    printLinkedList(&stack, (DISPLAY) displayEmployee);
+    data = pop(&stack);
+    printf("Pop %s\n", ((Employee *) data)->name);
+    data = pop(&stack);
+    printf("Pop %s\n", ((Employee *) data)->name);
+    data = pop(&stack);
+    printf("Pop %s\n", ((Employee *) data)->name);
+    data = pop(&stack);
+    printf("Pop %s\n", ((Employee *) data)->name);
 
     freeEmployee(e1);
     freeEmployee(e2);
