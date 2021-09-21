@@ -17,7 +17,7 @@ void push(Stack *stack, void *data) {
 void *pop(Stack *stack) {
     Node *tmp = stack->head;
     void *data;
-    if(stack->head == NULL) {
+    if (stack->head == NULL) {
         return NULL;
     } else if (stack->head == stack->tail) {
         data = tmp->data;
