@@ -29,4 +29,6 @@ void delete(LinkedList *, Node *);
 
 Node *getNode(LinkedList *, COMPARE, void *);
 
+void freeList(LinkedList *list);
+
 #endif //DATA_STRUCTURES_IN_C_LINKED_LIST_H

@@ -69,3 +69,13 @@ void delete(LinkedList *list, Node *node) {
     }
     free(node);
 }
+
+void freeList(LinkedList *list) {
+    Node *tmp;
+    while (NULL != list->head) {
+        tmp = list->head;
+        list->head = list->head->next;
+        free(tmp);
+        tmp = NULL;
+    }
+}

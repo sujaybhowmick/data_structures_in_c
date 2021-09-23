@@ -22,9 +22,10 @@ int main() {
     Node *node = getNode(&list, (COMPARE) compareEmployee, e2);
     Employee *emp = (Employee *) node->data;
     printf("Delete node \"%s\"\n\n", emp->name);
-    delete(&list, node);
+    //delete(&list, node);
     printf("List after deletion...\n\n");
     printLinkedList(&list, (DISPLAY) displayEmployee);
+    freeList(&list);
 
     printf("Queue using linked list example...\n");
     Queue queue;
@@ -41,6 +42,7 @@ int main() {
     printf("Dequeued %s\n", ((Employee *) data)->name);
     data = dequeue(&queue);
     printf("Dequeued %s\n", ((Employee *) data)->name);
+    freeList(&list);
 
     printf("Stack using linked list example...\n");
     Stack stack;
@@ -57,6 +59,7 @@ int main() {
     printf("Pop %s\n", ((Employee *) data)->name);
     data = pop(&stack);
     printf("Pop %s\n", ((Employee *) data)->name);
+    freeList(&list);
 
     freeEmployee(e1);
     freeEmployee(e2);
