@@ -7,10 +7,10 @@
 #define DATA_STRUCTURES_IN_C_STACK_H
 typedef LinkedList Stack;
 
-void initializeStack(Stack *stack);
+void initializeStack(Stack *);
 
-void push(Stack *stack, void *data);
+void push(Stack *, void *);
 
-void *pop(Stack *stack);
+void *pop(Stack *);
 
 #endif //DATA_STRUCTURES_IN_C_STACK_H

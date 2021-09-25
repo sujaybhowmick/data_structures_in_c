@@ -7,10 +7,10 @@
 #define DATA_STRUCTURES_IN_C_QUEUE_H
 typedef LinkedList Queue;
 
-void initializeQueue(Queue *queue);
+void initializeQueue(Queue *);
 
-void enqueue(Queue *queue, void *data);
+void enqueue(Queue *, void *);
 
-void *dequeue(Queue *queue);
+void *dequeue(Queue *);
 
 #endif //DATA_STRUCTURES_IN_C_QUEUE_H

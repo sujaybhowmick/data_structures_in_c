@@ -5,6 +5,7 @@
 #include "list/linked_list.h"
 #include "queue/queue.h"
 #include "stack/stack.h"
+#include "tree/tree.h"
 #include "employee/employee.h"
 #include "common/utils.h"
 
@@ -60,6 +61,19 @@ int main() {
     data = pop(&stack);
     printf("Pop %s\n", ((Employee *) data)->name);
     freeList(&list);
+
+    printf("Tree data structure\n");
+    TreeNode *root = NULL;
+    insertNode(&root, (COMPARE) compareEmployee, e1);
+    insertNode(&root, (COMPARE) compareEmployee, e2);
+    insertNode(&root, (COMPARE) compareEmployee, e3);
+
+    printf("Tree data structure recursive insert\n");
+    TreeNode *tree = NULL;
+    tree = insertNodeRecur(tree, (COMPARE) compareEmployee, e1);
+    tree = insertNodeRecur(tree, (COMPARE) compareEmployee, e2);
+    tree = insertNodeRecur(tree, (COMPARE) compareEmployee, e3);
+
 
     freeEmployee(e1);
     freeEmployee(e2);
